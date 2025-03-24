@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ shop.language }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Shop </title>
+  {% comment %} <title>{{ shop.name }}</title> {% endcomment %}
+  {{"style.css" | asset_url | stylesheet_tag}}
+  {{"tailwind.css" | asset_url | stylesheet_tag}}
+  {{ content_for_header }}
+</head>
+
+<body>
+
+  {% include "header.liquid" %}
+  {% include "homepage.liquid" %}
+  {{ content_for_layout }}
+  {% include "footer.liquid" %}
+</body>
+</html>
